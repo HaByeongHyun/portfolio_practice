@@ -368,7 +368,7 @@ etc {
   color: var(--color-white);
 }
 
-.project__description h3::after {
+.project__description h3:after {
   content: '';
   display: block;
   position: relative;
