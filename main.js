@@ -63,21 +63,21 @@ const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
 workBtnContainer.addEventListener('click', (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  console.log(filter);
   if (filter == null) {
     return;
   }
-  projectContainer.classList.add('anim-out');
-  projects.forEach((project) => {
-    console.log(project.dataset.type);
-    if (filter === '*' || filter === project.dataset.type) {
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
 
+  projectContainer.classList.add('anim-out');
+  // animation out하고 300ms 지난 후에 filter 문구 실행
   setTimeout(() => {
+    projects.forEach((project) => {
+      console.log(project.dataset.type);
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
     projectContainer.classList.remove('anim-out');
   }, 300);
 });

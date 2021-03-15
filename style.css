@@ -346,12 +346,12 @@ etc {
   flex-wrap: wrap;
   justify-content: center;
   opacity: 1;
-  transition: all var(--annimation-duration) ease-in;
+  transition: all var(--annimation-duration) ease-out;
 }
 
 .work__projects.anim-out {
   opacity: 0.6;
-  transform: scale(0.9) translateY(40px);
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {
